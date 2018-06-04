@@ -46,10 +46,10 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
 
-                    myDevice = ParticleCloudSDK.getCloud().getDevice("access token"); //Add access token here.....
+                    myDevice = ParticleCloudSDK.getCloud().getDevice("Device ID or name"); //Add Device ID or name.....
                     final String nameString = myDevice.getName();
-                    if(ParticleCloudSDK.getCloud().getDevice("access token").isConnected()){   //Add access token here.....
-                    while(ParticleCloudSDK.getCloud().getDevice("access token").isConnected()){   //Add access token here.....  
+                    if(ParticleCloudSDK.getCloud().getDevice(nameString).isConnected()){   
+                    while(ParticleCloudSDK.getCloud().getDevice(nameString).isConnected()){    
 
                         runOnUiThread(new Runnable() {
                         @Override
